@@ -23,8 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "lint": "eslint --ext .ts --ext .tsx src/  --fix"
+    "lint": "eslint --ext .ts --ext .tsx src/  --fix",
+    "build-storybook": "rm -rf ./dist/docs && build-storybook -o ./dist/docs"
   },
   "eslintConfig": {
     "extends": [
