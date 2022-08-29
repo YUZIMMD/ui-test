@@ -28,7 +28,7 @@ jobs: # jobs是一个workflow的核心任务，我们大部分的操作在jobs�
       - name: Deploy
         env:
           GH_REF: github.com/YUZIMMD/react-ui.git # 仓库地址
-          ACCESS_TOKEN: ${{ secrets.UITEST }} # github token
+          ACCESS_TOKEN: ${{ secrets.UITEST }} # github token UITEST 与仓库定义一致
           
         run: |
           git config --global user.name "YUZIMMD"
