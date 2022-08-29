@@ -30,7 +30,7 @@ jobs:
           GH_REF: github.com/YUZIMMD/react-ui.git # 仓库地址
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # github token
         run: |
-          git config --global user.name "dengyt"
+          git config --global user.name "YUZIMMD"
           git config --global user.email "2248545525@qq.com"
           git clone https://${GH_REF} .deploy_git
           cd .deploy_git
@@ -41,4 +41,4 @@ jobs:
           git add .
           git commit -m ":construction_worker:CI built at `date +"%Y-%m-%d %H:%M:%S"`"
           # GitHub Pages
-          git push --force --quiet "https://${GH_REF}" gh-pages:gh-pages
+          git push origin gh-pages --force --quiet
