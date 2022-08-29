@@ -29,7 +29,7 @@ jobs:
         env:
           GH_REF: github.com/YUZIMMD/react-ui.git # 仓库地址
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # github token
-          echo ${ACCESS_TOKEN}
+          echo "${ACCESS_TOKEN}"
         run: |
           git config --global user.name "YUZIMMD"
           git config --global user.email "2248545525@qq.com"
