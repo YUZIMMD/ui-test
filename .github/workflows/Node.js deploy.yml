@@ -5,7 +5,7 @@ on: # 触发条件
     branches:
       - master # 仅向 master 分支 push 时触发
 
-jobs:
+jobs: # jobs是一个workflow的核心任务，我们大部分的操作在jobs中完成，我们的任务（job）放在jobs这个集合下
   build: # job id
     name: Build and publish # job 名，不写默认使用 job id
     runs-on: ubuntu-latest # 运行环境，可选 ubuntu-latest, ubuntu-18.04, ubuntu-16.04, windows-latest, windows-2019, windows-2016, macOS-latest, macOS-10.14
@@ -28,10 +28,9 @@ jobs:
       - name: Deploy
         env:
           GH_REF: github.com/YUZIMMD/react-ui.git # 仓库地址
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # github token
+          ACCESS_TOKEN: ${{ secrets.UITEST }} # github token
           
         run: |
-          echo "${ACCESS_TOKEN}"
           git config --global user.name "YUZIMMD"
           git config --global user.email "2248545525@qq.com"
           git clone https://${GH_REF} .deploy_git
