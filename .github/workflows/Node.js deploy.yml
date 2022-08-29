@@ -31,7 +31,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # github token
           
         run: |
-          echo "${{ACCESS_TOKEN}}"
+          echo "${ACCESS_TOKEN}"
           git config --global user.name "YUZIMMD"
           git config --global user.email "2248545525@qq.com"
           git clone https://${GH_REF} .deploy_git
