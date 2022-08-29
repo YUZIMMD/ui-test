@@ -40,3 +40,5 @@ jobs:
           cd ./dist/docs
           git add .
           git commit -m ":construction_worker:CI built at `date +"%Y-%m-%d %H:%M:%S"`"
+          # GitHub Pages
+          git push --force --quiet "https://${GH_REF}" gh-pages:gh-pages
